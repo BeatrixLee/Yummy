@@ -14,13 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var latitudeTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
+    @IBOutlet weak var confirmarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        confirmarButton.layer.cornerRadius = 20
+        
+        
     }
 
     @IBAction func confirmarButton(_ sender: UIButton) {
+        
         
     }
     
