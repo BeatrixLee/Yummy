@@ -37,7 +37,6 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="btD-T3-ipG"/>
-                                    <segue destination="42D-WZ-HL5" kind="show" id="Lr9-Fz-HEB"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5YF-F0-xQ1">
@@ -62,6 +61,7 @@
                         <outlet property="latitudeTextField" destination="5ul-YM-hdy" id="1UJ-pe-UOG"/>
                         <outlet property="logoView" destination="ymu-Yo-hCx" id="5C5-G7-VGx"/>
                         <outlet property="longitudeTextField" destination="5YF-F0-xQ1" id="wY0-Hr-7EM"/>
+                        <segue destination="42D-WZ-HL5" kind="show" identifier="mostrarResultado" id="9Oq-NN-J1k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

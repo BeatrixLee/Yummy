@@ -12,9 +12,12 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
    
     
     @IBOutlet weak var cardsAcademyCollectionView: UICollectionView!
+    var onWater: OnWater? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(self.onWater)
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -46,6 +49,5 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
         
     }
     
-    
-    
 }
+
