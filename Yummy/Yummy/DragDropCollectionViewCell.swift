@@ -12,9 +12,9 @@ class DragDropCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nomeCardsLabel: UILabel!
     
-    public func configure(with label: UILabel) {
-        nomeCardsLabel.text = ""
-    }
+//    public func configure(with label: UILabel) {
+//        nomeCardsLabel.text = ""
+//    }
     
 }
 
