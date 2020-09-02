@@ -118,7 +118,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MILKCOOKIE" translatesAutoresizingMaskIntoConstraints="NO" id="cwW-hL-h29">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MILKCOOKIE" translatesAutoresizingMaskIntoConstraints="NO" id="cwW-hL-h29">
                                 <rect key="frame" x="-5" y="541" width="379" height="379"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -130,11 +130,28 @@
                     <connections>
                         <outlet property="cardsAcademyCollectionView" destination="WXs-XW-BTV" id="CP0-iE-aSd"/>
                         <outlet property="cookiesImageView" destination="cwW-hL-h29" id="yjX-Da-Zio"/>
+                        <segue destination="eMD-zs-WbI" kind="show" identifier="exibirResultado" id="sfW-Te-dNR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7z-zb-U2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966.66666666666674" y="137.94642857142856"/>
+        </scene>
+        <!--Resultado View Controller-->
+        <scene sceneID="GR0-nu-ZFl">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="eMD-zs-WbI" customClass="ResultadoViewController" customModule="Yummy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jtk-Gl-NMM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2sp-Ox-vrf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OsG-Uw-qFO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SnI-z2-8SG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="138"/>
         </scene>
     </scenes>
     <resources>
