@@ -76,10 +76,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cwW-hL-h29">
-                                <rect key="frame" x="81" y="590" width="252" height="252"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4H-jd-TeN">
                                 <rect key="frame" x="63" y="317" width="270" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -122,6 +118,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MILKCOOKIE" translatesAutoresizingMaskIntoConstraints="NO" id="cwW-hL-h29">
+                                <rect key="frame" x="-5" y="541" width="379" height="379"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fM7-Vw-lCh"/>
@@ -129,6 +129,7 @@
                     <navigationItem key="navigationItem" id="zjY-sa-RFo"/>
                     <connections>
                         <outlet property="cardsAcademyCollectionView" destination="WXs-XW-BTV" id="CP0-iE-aSd"/>
+                        <outlet property="cookiesImageView" destination="cwW-hL-h29" id="yjX-Da-Zio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7z-zb-U2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,4 +137,7 @@
             <point key="canvasLocation" x="966.66666666666674" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MILKCOOKIE" width="3240" height="3240"/>
+    </resources>
 </document>

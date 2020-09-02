@@ -3,7 +3,7 @@ import Foundation
 struct OnWater: Codable {
     let query, requestID: String
     let lat, lon: Int
-    let water: Bool
+    var water: Bool
 
     enum CodingKeys: String, CodingKey {
         case query
