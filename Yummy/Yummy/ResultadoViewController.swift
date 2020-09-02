@@ -11,13 +11,22 @@ import UIKit
 class ResultadoViewController: ViewController {
     
     var resultado: String?
-
+    var secoOuMolhado: UIImageView?
+    
+    @IBOutlet weak var biscoitoImageView: UIImageView!
+    @IBOutlet weak var revelaNomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        revelaNomeLabel.text = resultado
+        biscoitoImageView.image = secoOuMolhado?.image
 
         print(resultado)
+        print(secoOuMolhado)
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*

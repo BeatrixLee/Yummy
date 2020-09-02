@@ -19,7 +19,9 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var onWater: OnWater?
     var initialPosition = CGPoint.zero
+    
     var resultado: String?
+    var secoOuMolhado: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,18 +51,24 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
         if onWater?.water == false {
             cookiesImageView.image = #imageLiteral(resourceName: "CRACKEDCOOKIE")
             print("deu seco")
+            
         }else{
             if onWater?.water == true {
                 cookiesImageView.image = #imageLiteral(resourceName: "MILKCOOKIE")
                 print("deu molhado")
             }
         }
+        
+        self.secoOuMolhado = cookiesImageView
+        print(secoOuMolhado)
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "exibirResultado" {
             let viewController = segue.destination as? ResultadoViewController
             viewController?.resultado = self.resultado
+            viewController?.secoOuMolhado = self.secoOuMolhado
         }
     }
     
