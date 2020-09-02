@@ -23,8 +23,30 @@ class ViewController: UIViewController {
         
         confirmarButton.layer.cornerRadius = 20
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        dismissKey()
         
     }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else {return}
+        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
+        let keyboardFrame = keyboardSize.cgRectValue
+        
+        if self.view.frame.origin.y == 0 {
+            self.view.frame.origin.y -= keyboardFrame.height
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    
     
     @IBAction func confirmarButton(_ sender: UIButton) {
         
@@ -82,3 +104,14 @@ class ViewController: UIViewController {
     
 }
 
+extension UIViewController {
+    func dismissKey()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false; view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+}
