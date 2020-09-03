@@ -51,17 +51,17 @@ class ViewController: UIViewController {
         
         if self.latitudeTextField.text == "" || self.longitudeTextField.text == "" {
             // se um ou outro nao estiver preenchido, avisa para o usuario preencher
+            alertaPreenchimento("Preencha os campos")
+            
+        } else if Int(self.latitudeTextField.text!) ?? -91 < -90 || Int(self.latitudeTextField.text!) ?? 91 > 90 {
+            alertaPreenchimento("O primeiro campo é entre -90 e 90 porra")
+            
+        } else if Int(self.longitudeTextField.text!) ?? -181 < -180 || Int(self.longitudeTextField.text!) ?? 181 > 180 {
+            alertaPreenchimento("O segundo campo é entre -180 e 180 merda")
+            
+        } else {
+            load()
         }
-        
-        if Int(self.latitudeTextField.text!) ?? -91 < -90 || Int(self.latitudeTextField.text!) ?? 91 > 90 {
-            // avisa que tem que ser maior que -90 e menor que 90
-        }
-        
-        if Int(self.longitudeTextField.text!) ?? -181 < -180 || Int(self.longitudeTextField.text!) ?? 181 > 180 {
-            // avisa que tem que ser maior que -180 e menor que 180
-        }
-        
-        load()
         
     }
     
@@ -74,6 +74,18 @@ class ViewController: UIViewController {
         }
     }
     
+    func alertaPreenchimento(_ mensagem: String){
+        //gera mensagem de alerta
+        let alerta = UIAlertController(title: "Errroooou!", message: mensagem, preferredStyle: UIAlertController.Style.alert)
+        //gera o botão pra tirar o alerta
+        let botaoOk = UIAlertAction(title: "Entendi", style: UIAlertAction.Style.default) {
+            (UIAlertAction) in
+        }
+        alerta.addAction(botaoOk)
+        
+        self.present(alerta, animated: true, completion: nil)
+    }
+        
     // ve se o biscoito caiu na agua ou na terra
     func load() {
         let latitude = latitudeTextField.text!
