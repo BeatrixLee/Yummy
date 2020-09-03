@@ -12,6 +12,7 @@ class ResultadoViewController: ViewController {
     
     var resultado: String?
     var secoOuMolhado: UIImageView?
+    var nomeReal: String?
     
     @IBOutlet weak var biscoitoImageView: UIImageView!
     @IBOutlet weak var revelaNomeLabel: UILabel!
@@ -22,6 +23,7 @@ class ResultadoViewController: ViewController {
         
         revelaNomeLabel.text = resultado
         biscoitoImageView.image = secoOuMolhado?.image
+        revelaNomeRealLabel.text = nomeReal
 
         print(resultado)
         print(secoOuMolhado)

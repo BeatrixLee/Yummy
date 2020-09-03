@@ -13,6 +13,8 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
  
     public var nomesMisteriosos = ["A revelação dos paredões", "Abacaxii", "Allen Iverson", "Carai Largatixa", "Chorão", "Dantitas", "Dog Caramelo", "Doninha Espacial", "Faroeste Universitário", "Fratis", "Gado Tristinho", "HeisenbergPOW", "High On Chicletinho", "Creide", "Máscara Verde", "Mister M", "Moita Afoita", "O Rebocado de Jequiti", "OiCasado", "Orelhinha de Gata", "Panda neurótico", "Passoquinha", "Reviradora de Olhos Profissional", "Sorria Mo", "Stefani Joanne Angelina Germanotta", "Tamtam", "Tutuzinho de Feijão", "Xuxubabe", "Yoga boy", "Zé Mamão", "Zebiloide"]
     
+    var nomesReais = ["Danilo Lira", "Junior", "Luis Pereira", "Pedro Spínola", "Erick Almeida", "Lívia", "Mirella Almeida", "Ana Carolina Melo", "Hugo Santos", "Lucas Vinícius", "Hélio Silva", "José Henrique", "Renan Freitas", "Ravena", "Eduardo Lopes C", "Victor Vieira", "Marina Savluchinske", "Felipe Bandeira", "Dudu Ramos", "Alanis Lima", "Alexandra", "Íris Soares", "Marina Lima", "Morgana Galamba", "Samuel", "Matheus", "Ana", "Meyrillan", "Wilton Ramos", "Juliano", "Vítor Bárrios"]
+    
     
     @IBOutlet weak var cookiesImageView: UIImageView!
     @IBOutlet weak var cardsAcademyCollectionView: UICollectionView!
@@ -22,6 +24,7 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
     var initialPosition = CGPoint.zero
     
     var resultado: String?
+    var nomeReal: String?
     var secoOuMolhado: UIImageView?
     
     override func viewDidLoad() {
@@ -35,6 +38,12 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
         cookiesImageView.isUserInteractionEnabled = true
         
         print(self.onWater)
+                
+        if self.onWater!.water {
+            self.resultadoBiscoitoLabel.text = "Em um momento de distração, seu biscoito acaba caindo dentro do leite. Agora ele está encharcado."
+        } else {
+            self.resultadoBiscoitoLabel.text = "Você ganhou um biscoito, mas infelizmente o leite está em falta, então ele está sequinho. De qualquer forma, ele é muito gostoso."
+        }
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -68,6 +77,7 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
         if segue.identifier == "exibirResultado" {
             let viewController = segue.destination as? ResultadoViewController
             viewController?.resultado = self.resultado
+            viewController?.nomeReal = self.nomeReal
             viewController?.secoOuMolhado = self.secoOuMolhado
         }
     }
@@ -88,6 +98,8 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
                 if matchingViews.first != nil {
                     let cell = matchingViews.first! as! DragDropCollectionViewCell
                     self.resultado = cell.nomeCardsLabel.text
+                    // pega o indice do apelido e pega o nome real com o mesmo indice
+                    self.nomeReal = self.nomesReais[self.nomesMisteriosos.firstIndex(of: cell.nomeCardsLabel.text!)!]
                     performSegue(withIdentifier: "exibirResultado", sender: self)
                 }
             }else{
