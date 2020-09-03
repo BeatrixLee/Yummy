@@ -162,7 +162,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OsG-Uw-qFO"/>
                     <connections>
-                        <outlet property="biscoitoImageView" destination="gga-AF-aI1" id="ZdL-K8-nUV"/>
+                        <outlet property="biscoitoImageView" destination="gga-AF-aI1" id="UKN-C2-CHW"/>
                         <outlet property="revelaNomeLabel" destination="FfJ-yi-nbx" id="ScT-zh-bK9"/>
                     </connections>
                 </viewController>

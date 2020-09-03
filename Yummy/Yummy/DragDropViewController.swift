@@ -43,6 +43,8 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
         cardsAcademyCollectionView.delegate = self
         cardsAcademyCollectionView.dataSource = self
         
+        cookie()
+                
     }
     
     //func para mostrar se o biscoito é seco ou molhando dependendo do resultado da API
