@@ -26,10 +26,11 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // cria gesture recognizer e adiciona na ImageView com os cookies
         let dragInteraction = UIPanGestureRecognizer(target: self, action: #selector(dragCookies(_:)))
         cookiesImageView.addGestureRecognizer(dragInteraction)
         
+        // ativa as interações do user
         cookiesImageView.isUserInteractionEnabled = true
         
         print(self.onWater)
@@ -42,10 +43,9 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
         cardsAcademyCollectionView.delegate = self
         cardsAcademyCollectionView.dataSource = self
         
-        
-        cookie()
-        
     }
+    
+    //func para mostrar se o biscoito é seco ou molhando dependendo do resultado da API
     
     func cookie() {
         if onWater?.water == false {
@@ -58,10 +58,7 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
                 print("deu molhado")
             }
         }
-        
         self.secoOuMolhado = cookiesImageView
-        print(secoOuMolhado)
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,6 +68,8 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
             viewController?.secoOuMolhado = self.secoOuMolhado
         }
     }
+    
+    //func para configurar o gesto que vai ser feito com base em estados de casos, como quando o toque começa, qual ele muda e quando termina
     
     @objc func dragCookies(_ recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
@@ -120,13 +119,6 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
         return CGSize(width: 160, height: 180)
         
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
-    }
-    
-    
-    
 }
 
 
