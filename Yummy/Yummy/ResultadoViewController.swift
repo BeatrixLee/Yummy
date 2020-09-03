@@ -15,6 +15,7 @@ class ResultadoViewController: ViewController {
     
     @IBOutlet weak var biscoitoImageView: UIImageView!
     @IBOutlet weak var revelaNomeLabel: UILabel!
+    @IBOutlet weak var revelaNomeRealLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

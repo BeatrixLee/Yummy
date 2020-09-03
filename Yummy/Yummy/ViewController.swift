@@ -74,6 +74,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // ve se o biscoito caiu na agua ou na terra
     func load() {
         let latitude = latitudeTextField.text!
         let longitude = longitudeTextField.text!

@@ -11,11 +11,12 @@ import UIKit
 
 class DragDropViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
  
-    public var nomesMisteriosos = ["A revelação dos paredões", "Abacaxii", "Allen Iverson", "Carai Largatixa", "ChorãoComedorDeCasado", "Dantitas", "Dog Caramelo", "Doninha Espacial", "Faroeste Universitário", "Fratis", "Gado Tristinho", "HeisenbergPOW", "High On Chicletinho", "Creide", "Máscara Verde", "Mister M", "Moita Afoita", "O Rebocado de Jequiti", "OiCasado", "Orelhinha de Gata", "Panda neurótico", "Passoquinha", "Reviradora de Olhos Profissional", "Sorria Mo", "Stefani Joanne Angelina Germanotta", "Tamtam", "Tutuzinho de Feijão", "Xuxubabe", "Yoga boy", "Zé Mamão", "Zebiloide"]
+    public var nomesMisteriosos = ["A revelação dos paredões", "Abacaxii", "Allen Iverson", "Carai Largatixa", "Chorão", "Dantitas", "Dog Caramelo", "Doninha Espacial", "Faroeste Universitário", "Fratis", "Gado Tristinho", "HeisenbergPOW", "High On Chicletinho", "Creide", "Máscara Verde", "Mister M", "Moita Afoita", "O Rebocado de Jequiti", "OiCasado", "Orelhinha de Gata", "Panda neurótico", "Passoquinha", "Reviradora de Olhos Profissional", "Sorria Mo", "Stefani Joanne Angelina Germanotta", "Tamtam", "Tutuzinho de Feijão", "Xuxubabe", "Yoga boy", "Zé Mamão", "Zebiloide"]
     
     
     @IBOutlet weak var cookiesImageView: UIImageView!
     @IBOutlet weak var cardsAcademyCollectionView: UICollectionView!
+    @IBOutlet weak var resultadoBiscoitoLabel: UILabel!
     
     var onWater: OnWater?
     var initialPosition = CGPoint.zero
