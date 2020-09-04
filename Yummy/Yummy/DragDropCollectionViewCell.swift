@@ -11,6 +11,7 @@ import UIKit
 class DragDropCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nomeCardsLabel: UILabel!
+    @IBOutlet weak var imagemCardsImage: UIImageView!
     
 }
 

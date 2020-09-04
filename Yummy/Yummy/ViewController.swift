@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         
     }
     
+    
     // quando for chamar uma segue (sair de uma tela para outra) primeiro ele passa por esse metodo, para passar a informacao de uma tela para outra
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mostrarResultado" {

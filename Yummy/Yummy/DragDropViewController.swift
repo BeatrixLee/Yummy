@@ -121,9 +121,10 @@ class DragDropViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cellIndex = indexPath.item
         
         cell.layer.cornerRadius = 20
-        cell.layer.backgroundColor = #colorLiteral(red: 0.2833517194, green: 0.9702231288, blue: 0.8814888597, alpha: 1)
-        
+        cell.layer.backgroundColor = #colorLiteral(red: 0.337254902, green: 0.7960784314, blue: 0.9764705882, alpha: 1)
+
         cell.nomeCardsLabel.text = nomesMisteriosos[cellIndex]
+        cell.imagemCardsImage.image = #imageLiteral(resourceName: "cellBiscoito")
         
         return cell
         

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1065F1522501CAE200918764 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1065F14F2501C42800918764 /* Comfortaa-Light.ttf */; };
+		1065F1532501CAE500918764 /* Comfortaa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1065F14E2501C42800918764 /* Comfortaa-Medium.ttf */; };
+		1065F1542501CAE700918764 /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1065F1502501C42800918764 /* Comfortaa-SemiBold.ttf */; };
+		1065F1552501CAEA00918764 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1065F14D2501C42800918764 /* Comfortaa-Regular.ttf */; };
+		1065F1562501CAEC00918764 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1065F1512501C42800918764 /* Comfortaa-Bold.ttf */; };
 		10EA98FF24FD361A00A7A01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EA98FE24FD361A00A7A01A /* AppDelegate.swift */; };
 		10EA990124FD361A00A7A01A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EA990024FD361A00A7A01A /* SceneDelegate.swift */; };
 		10EA990324FD361A00A7A01A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EA990224FD361A00A7A01A /* ViewController.swift */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1065F14D2501C42800918764 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		1065F14E2501C42800918764 /* Comfortaa-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Medium.ttf"; sourceTree = "<group>"; };
+		1065F14F2501C42800918764 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
+		1065F1502501C42800918764 /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
+		1065F1512501C42800918764 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
 		10EA98FB24FD361A00A7A01A /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EA98FE24FD361A00A7A01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10EA990024FD361A00A7A01A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +55,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1065F14B2501C32A00918764 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1065F1512501C42800918764 /* Comfortaa-Bold.ttf */,
+				1065F14F2501C42800918764 /* Comfortaa-Light.ttf */,
+				1065F14E2501C42800918764 /* Comfortaa-Medium.ttf */,
+				1065F14D2501C42800918764 /* Comfortaa-Regular.ttf */,
+				1065F1502501C42800918764 /* Comfortaa-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		10EA98F224FD361A00A7A01A = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +94,7 @@
 				10EA991C25002B0400A7A01A /* ResultadoViewController.swift */,
 				10EA990424FD361A00A7A01A /* Main.storyboard */,
 				10EA990724FD361D00A7A01A /* Assets.xcassets */,
+				1065F14B2501C32A00918764 /* Fonts */,
 				10EA990924FD361D00A7A01A /* LaunchScreen.storyboard */,
 				10EA990C24FD361D00A7A01A /* Info.plist */,
 				10EA991224FD431E00A7A01A /* OnWaterAPI.swift */,
@@ -137,6 +160,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1065F1562501CAEC00918764 /* Comfortaa-Bold.ttf in Resources */,
+				1065F1522501CAE200918764 /* Comfortaa-Light.ttf in Resources */,
+				1065F1532501CAE500918764 /* Comfortaa-Medium.ttf in Resources */,
+				1065F1542501CAE700918764 /* Comfortaa-SemiBold.ttf in Resources */,
+				1065F1552501CAEA00918764 /* Comfortaa-Regular.ttf in Resources */,
 				10EA990B24FD361D00A7A01A /* LaunchScreen.storyboard in Resources */,
 				10EA990824FD361D00A7A01A /* Assets.xcassets in Resources */,
 				10EA990624FD361A00A7A01A /* Main.storyboard in Resources */,
