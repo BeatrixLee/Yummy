@@ -21,12 +21,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
+        
         dismissKey()
-
+        
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         
         self.present(alerta, animated: true, completion: nil)
     }
-        
+    
     // ve se o biscoito caiu na agua ou na terra
     func load() {
         let latitude = latitudeTextField.text!
